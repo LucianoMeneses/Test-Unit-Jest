@@ -1,7 +1,6 @@
 //importa os módulos e aqruivos necessários
 const request = require('supertest');
 const server = require('../app.js');
-const sayTDD = require('../helloJest');
 
 //o que será executado antes de todos os testes
 beforeAll(async () => {
@@ -39,11 +38,6 @@ describe('inicio dos testes', () => {
         expect(response.status).toEqual(200);
         expect(response.text).toContain('<h4>O Koa é uma nova estrutura da Web criada pela equipe do Express, que pretende ser uma base menor, mais expressiva e mais robusta para aplicativos da Web e APIs</h4>');
 
-    });
-    //aqui não iremos testar uma rota e sim o retorno de uma função.
-    test('irá verificar o retorno da função saytdd', () => {
-        //é esperado que o retorno da função saytdd seja:
-        expect(sayTDD()).toMatch('TDD é o Desenvolvimento Orientado por Testes');
     });
 
     test('adding positive numbers is not zero', () => {
