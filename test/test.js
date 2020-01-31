@@ -14,7 +14,6 @@ afterAll(() => {
     console.log('servidor fechado');
 });
 
-
 describe('inicio dos testes', () => {
     //descrição do caso de testes
     test('acessa a rota da home e verifica o conteúdo que é exibido ', async () => {
